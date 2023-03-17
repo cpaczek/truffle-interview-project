@@ -1,0 +1,49 @@
+.pill {
+  font-size: 12px;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.pill::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 1.5em;
+  background-position: center;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+.twitch {
+  background: #9147ff;
+  color: white;
+  font-weight: 500;
+}
+
+.twitch::before {
+  background-image: url("@assets/img/icons/twitch.svg");
+}
+.youtube {
+  background: #f83838;
+  color: white;
+  font-weight: 500;
+}
+
+.youtube::before {
+  background-image: url("@assets/img/icons/youtube.svg");
+}
+.offline {
+  background-color: black;
+  color: #919191;
+}
+.offline::before {
+  filter: brightness(0.5);
+}

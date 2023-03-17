@@ -1,0 +1,66 @@
+.card-body {
+  background: #1f1f1f;
+  color: white;
+  padding: 1.5em;
+  border-radius: 0.25em;
+  outline: black 0px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  height: calc(100% - 1.5em - 20px);
+  position: relative;
+
+  img {
+    width: 50%;
+    border-radius: 50%;
+  }
+  // remove all a styling
+  a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+
+    color: inherit;
+  }
+  p {
+    margin: 0;
+    font-family: Inter;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 20px;
+    width: 100%;
+  }
+}
+.card-body:hover {
+  outline: #f75fa7 1px solid;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.pin img {
+  position: absolute;
+  display: none;
+  top: 1em;
+  right: 1em;
+  width: 1em;
+}
+.card-body:hover .pin img {
+  cursor: pointer;
+  display: block;
+  filter: brightness(0.5);
+}
+.card-body .pinned img,
+.card-body:hover .pinned img {
+  display: block;
+  filter: brightness(1);
+}
