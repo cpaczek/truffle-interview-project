@@ -74,6 +74,7 @@ async function getLiveData() {
 // wait for page load
 
 window.onload = () => {
+  if (window.self === window.top) return;
   if (window.location.href === "https://www.twitch.tv/directory/following/channels") {
     getChannelData();
   }
